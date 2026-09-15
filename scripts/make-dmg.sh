@@ -25,3 +25,5 @@ ln -s /Applications "$STAGE/Applications"
 rm -f "$DMG"
 hdiutil create -volname Visor -srcfolder "$STAGE" -ov -format UDZO "$DMG" >/dev/null
 echo "built $DMG ($(du -h "$DMG" | cut -f1))"
+echo "ad-hoc signed: on any other Mac, run"
+echo "  xattr -dr com.apple.quarantine /Applications/Visor.app"

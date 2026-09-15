@@ -67,6 +67,16 @@ Or package a local `.dmg`:
 
 Drag it to `/Applications` and launch. Visor lives entirely in the notch — no Dock icon, no menu bar item, nothing to close.
 
+### Moving it to another Mac
+
+The build is ad-hoc signed, so anything that arrives via AirDrop, a download, or a copied disk image gets quarantined and Gatekeeper refuses to open it. Strip the flag on the receiving Mac:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/Visor.app
+```
+
+Or System Settings → Privacy & Security → **Open Anyway**. Permissions are per-machine, so the calendar will ask again on the new one.
+
 > Calendar permissions are bound to the app's code signature. Add an Apple ID in Xcode → Settings → Accounts (the free tier is enough) and set `DEVELOPMENT_TEAM` in `project.yml`, or macOS will forget the grant on every rebuild.
 
 ## Built with

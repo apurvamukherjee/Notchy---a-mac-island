@@ -2,7 +2,7 @@
 
 > A native, Dynamic Island–style notch app for macOS. Goals, in order: **feels like iOS**, **near-zero idle cost**, **clean codebase**.
 >
-> Research date: 15 Sep 2026. Target dev machine: MacBook Air M4 15" (notched), macOS 26.6.2.
+> Research date: 15 Sep 2026Target dev machine: MacBook Air M4 15" (notched), macOS 26.6.2.
 
 ---
 
