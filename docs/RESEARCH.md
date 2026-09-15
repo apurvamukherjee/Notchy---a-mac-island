@@ -11,7 +11,7 @@
 | Decision | Choice | Why |
 |---|---|---|
 | Language / UI | Swift 6 + SwiftUI, AppKit for the window layer | Only way to get native springs, SF Symbols, system materials, low power |
-| Window layer | **Own implementation**, using DynamicNotchKit as a reference | Full control of hit-testing, frame sizing and animation timing, which is where "feel" and power are won or lost |
+| Window layer | **Own implementation**, using DynamicNotchKit as a reference | Full control of hit-testing, frame sizing and animation timing, which is where "feel" and power are won or lost 
 | Hover detection | **Window frame follows the visible shape** + `NSTrackingArea` | No global mouse monitor → zero CPU while the cursor is elsewhere |
 | State | One `@Observable` store + an **activity priority queue** | Mirrors how iOS decides what the island shows |
 | Motion | Central `Motion` tokens, springs only, shape leads / content follows | Interruptible, velocity-preserving, consistent |
